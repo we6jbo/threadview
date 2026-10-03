@@ -2,6 +2,8 @@
 
 #include <QMainWindow>
 
+class StlWidget;
+
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;
@@ -16,6 +18,12 @@ public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void saveOriginalStl();
+    void toggleAnimation(bool running);
+    void resetView();
+
 private:
     Ui::MainWindow *ui;
+    StlWidget *m_viewer;
 };

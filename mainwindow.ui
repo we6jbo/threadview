@@ -4,42 +4,63 @@
  <widget class="QMainWindow" name="MainWindow">
   <property name="geometry">
    <rect>
-    <x>0</x>
-    <y>0</y>
-    <width>640</width>
-    <height>420</height>
+    <x>0</x><y>0</y><width>900</width><height>680</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>threadview</string>
+   <string>ThreadView</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QVBoxLayout" name="verticalLayout">
+   <layout class="QVBoxLayout" name="mainLayout">
     <item>
-     <widget class="QLabel" name="titleLabel">
-      <property name="text">
-       <string>threadview</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignmentFlag::AlignCenter</set>
-      </property>
+     <widget class="QTabWidget" name="tabs">
+      <property name="currentIndex"><number>0</number></property>
+      <widget class="QWidget" name="viewerTab">
+       <attribute name="title"><string>3D Viewer</string></attribute>
+       <layout class="QVBoxLayout" name="viewerLayout">
+        <item>
+         <widget class="QLabel" name="titleLabel">
+          <property name="text"><string>&lt;h2&gt;ThreadView&lt;/h2&gt;&lt;p&gt;Interactive 3D-printable threaded fastener&lt;/p&gt;</string></property>
+          <property name="alignment"><set>Qt::AlignmentFlag::AlignCenter</set></property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="buttonLayout">
+          <item>
+           <widget class="QPushButton" name="animationButton">
+            <property name="text"><string>Pause animation</string></property>
+            <property name="checkable"><bool>true</bool></property>
+           </widget>
+          </item>
+          <item><widget class="QPushButton" name="resetButton"><property name="text"><string>Reset view</string></property></widget></item>
+          <item><widget class="QPushButton" name="saveStlButton"><property name="text"><string>Save STL for 3D printing</string></property></widget></item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QLabel" name="helpLabel">
+          <property name="text"><string>Drag with the left mouse button to rotate. Use the mouse wheel to zoom.</string></property>
+          <property name="alignment"><set>Qt::AlignmentFlag::AlignCenter</set></property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="familyTab">
+       <attribute name="title"><string>McCabe Context</string></attribute>
+       <layout class="QVBoxLayout" name="familyLayout">
+        <item><widget class="QTextBrowser" name="familyText"/></item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="aboutTab">
+       <attribute name="title"><string>About</string></attribute>
+       <layout class="QVBoxLayout" name="aboutLayout">
+        <item><widget class="QTextBrowser" name="aboutText"/></item>
+       </layout>
+      </widget>
      </widget>
-    </item>
-    <item>
-     <spacer name="verticalSpacer">
-      <property name="orientation">
-       <enum>Qt::Orientation::Vertical</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>20</width>
-        <height>40</height>
-       </size>
-      </property>
-     </spacer>
     </item>
    </layout>
   </widget>
+  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>
