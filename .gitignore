@@ -1,8 +1,84 @@
+# ThreadView — files that should not be committed
+
+# Build output
 build/
 build-*/
 cmake-build-*/
 CMakeFiles/
 CMakeCache.txt
+cmake_install.cmake
+Makefile
+compile_commands.json
 *.o
+*.obj
+*.a
+*.so
+*.so.*
+*.dll
+*.dylib
+*.exe
+
+# Qt Creator / IDE-local state
+.qtcreator/
 *.user
+*.user.*
 *.autosave
+*.pro
+*.pro.user
+
+# CMake / Ninja generated files
+.ninja_deps
+.ninja_log
+build.ninja
+rules.ninja
+
+# Flatpak local build artifacts
+.flatpak-builder/
+repo/
+flatpak-build/
+*.flatpak
+
+# Snap local build artifacts
+parts/
+prime/
+stage/
+.snapcraft/
+*.snap
+
+# Temporary / editor files
+*~
+*.swp
+*.swo
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
+
+# Logs, crash dumps, and local runtime state
+*.log
+core
+core.*
+*.core
+
+# Environment / local secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*
+secrets*
+*token*
+
+# Local archives/packages made during development
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+
+# Keep project assets and disclosure files in Git:
+# assets/share91f.stl
+# AI-DISCLOSURE.txt
+# metadata/tg_context_snapshot.json

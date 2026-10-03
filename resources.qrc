@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/assets">
+        <file alias="share91f.stl">assets/share91f.stl</file>
+    </qresource>
+    <qresource prefix="/metadata">
+        <file alias="tg_context_snapshot.json">metadata/tg_context_snapshot.json</file>
+    </qresource>
+</RCC>

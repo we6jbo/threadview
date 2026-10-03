@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "project_id": "page.j03.threadview",
+  "project_name": "ThreadView",
+  "purpose": "Qt viewer and exporter for a 3D-printable threaded fastener STL.",
+  "codes": [
+    {
+      "code": "TG315902",
+      "display_name": "Noma Vade Smith"
+    },
+    {
+      "code": "TG708346",
+      "display_name": "Lester McCabe"
+    },
+    {
+      "code": "TG628417",
+      "display_name": "John McCabe"
+    },
+    {
+      "code": "TG891052",
+      "display_name": "James McAvoy"
+    },
+    {
+      "code": "TG654147",
+      "display_name": "James McCabe"
+    }
+  ],
+  "portable": true,
+  "private_registry_required": false
+}
