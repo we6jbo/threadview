@@ -28,3 +28,11 @@ target_link_libraries(threadview PRIVATE
 install(TARGETS threadview
     RUNTIME DESTINATION bin
 )
+
+# Flathub desktop integration
+install(FILES org.oneal.threadview.desktop
+        DESTINATION share/applications)
+install(FILES org.oneal.threadview.metainfo.xml
+        DESTINATION share/metainfo)
+install(FILES org.oneal.threadview.svg
+        DESTINATION share/icons/hicolor/scalable/apps)

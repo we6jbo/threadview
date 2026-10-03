@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Threadview
+Comment=Practice and learn fractions
+Exec=threadview
+Icon=org.oneal.threadview
+Terminal=false
+Categories=Education;

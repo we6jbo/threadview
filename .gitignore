@@ -82,3 +82,8 @@ secrets*
 # assets/share91f.stl
 # AI-DISCLOSURE.txt
 # metadata/tg_context_snapshot.json
+
+# Local Flatpak/Flathub preparation checkpoints and backups
+.oneal-flathub-readiness-ok
+*.before-flathub-*
+*.before-validator-*
