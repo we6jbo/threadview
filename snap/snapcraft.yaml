@@ -1,0 +1,71 @@
+name: threadview
+title: ThreadView
+license: MIT AND CC0-1.0
+contact: https://github.com/we6jbo/threadview/issues
+website: https://j03.page/
+source-code: https://github.com/we6jbo/threadview
+issues: https://github.com/we6jbo/threadview/issues
+base: core24
+version: '0.3.6'
+summary: View and export a 3D-printable threaded fastener
+description: |
+  ThreadView is a small experimental Qt application for viewing and
+  animating a 3D-printable threaded fastener. Rotate and zoom the model,
+  inspect it, and save the included STL file for slicing and 3D printing.
+
+  ThreadView is intentionally narrow in scope: it is a niche demonstration
+  and utility rather than a general-purpose CAD or slicer application.
+
+grade: stable
+confinement: strict
+
+apps:
+  threadview:
+    command: usr/bin/threadview
+    desktop: usr/share/applications/org.oneal.threadview.desktop
+    plugs:
+      - desktop
+      - desktop-legacy
+      - home
+      - opengl
+      - wayland
+      - x11
+    environment:
+      QT_QPA_PLATFORM: xcb
+      QT_PLUGIN_PATH: $SNAP/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/qt6/plugins
+      QT_QPA_PLATFORM_PLUGIN_PATH: $SNAP/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/qt6/plugins/platforms
+      QT_XKB_CONFIG_ROOT: $SNAP/usr/share/X11/xkb
+      LIBGL_DRIVERS_PATH: $SNAP/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/dri
+
+parts:
+  threadview:
+    plugin: cmake
+    source: .snap-source
+    build-packages:
+      - cmake
+      - g++
+      - libgl1-mesa-dev
+      - qt6-base-dev
+    stage-packages:
+      - libgl1
+      - libglx-mesa0
+      - libopengl0
+      - libqt6core6
+      - libqt6dbus6
+      - libqt6gui6
+      - libqt6network6
+      - libqt6opengl6
+      - libqt6openglwidgets6
+      - libqt6widgets6
+      - libxkbcommon-x11-0
+      - libxcb-cursor0
+      - libxcb-icccm4
+      - libxcb-image0
+      - libxcb-keysyms1
+      - libxcb-render-util0
+      - libxcb-xinerama0
+      - libxcb-xinput0
+      - libxcb-xkb1
+    cmake-parameters:
+      - -DCMAKE_BUILD_TYPE=Release
+      - -DCMAKE_INSTALL_PREFIX=/usr

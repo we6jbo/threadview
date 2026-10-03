@@ -87,3 +87,10 @@ secrets*
 .oneal-flathub-readiness-ok
 *.before-flathub-*
 *.before-validator-*
+
+# ThreadView Snap helper outputs
+snapcraft-build.log
+threadview-snap-progress.txt
+
+# Generated clean source tree used only for Snapcraft
+.snap-source/

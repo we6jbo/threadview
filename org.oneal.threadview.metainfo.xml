@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
   <id>org.oneal.threadview</id>
-  <name>Threadview</name>
-  <summary>Practice and learn fractions</summary>
+  <name>ThreadView</name>
+  <summary>Inspect and export a 3D-printable threaded fastener</summary>
   <metadata_license>CC0-1.0</metadata_license>
-  <project_license>Apache-2.0</project_license>
+  <project_license>LicenseRef-proprietary</project_license>
   <description>
-    <p>A desktop application for practicing fraction arithmetic.</p>
+    <p>
+      ThreadView is a small experimental Qt application for viewing and
+      animating a 3D-printable threaded fastener. Users can rotate and zoom
+      the model and save the included STL file for slicing and 3D printing.
+    </p>
+    <p>
+      The application is intentionally narrow in scope and is intended as a
+      simple demonstration and niche utility rather than a general-purpose
+      CAD or slicer application.
+    </p>
   </description>
   <launchable type="desktop-id">org.oneal.threadview.desktop</launchable>
   <categories>
-    <category>Education</category>
+    <category>Graphics</category>
+    <category>Engineering</category>
   </categories>
 </component>

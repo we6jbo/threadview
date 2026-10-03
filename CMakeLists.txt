@@ -36,3 +36,10 @@ install(FILES org.oneal.threadview.metainfo.xml
         DESTINATION share/metainfo)
 install(FILES org.oneal.threadview.svg
         DESTINATION share/icons/hicolor/scalable/apps)
+
+
+# Install printable model and portable provenance metadata as package data.
+install(FILES assets/share91f.stl
+        DESTINATION share/threadview/assets)
+install(FILES metadata/tg_context_snapshot.json
+        DESTINATION share/threadview/metadata)
